@@ -1,6 +1,7 @@
 package com.example.spring_boot_practice.Controllers;
 
 import com.example.spring_boot_practice.ConstructorInjection.Coach;
+import com.example.spring_boot_practice.ConstructorInjection.FootballCoach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +16,7 @@ public class FunRestController {
     {
         return "Hello I am a First Rest Controller";
     }
-
-
-
+    
     // Constructor Injection
     @Autowired
     public FunRestController( @Qualifier("footballCoach")Coach coach)
@@ -26,11 +25,11 @@ public class FunRestController {
     }
 
     //Setter Injection
-    @Autowired
+   /* @Autowired
     public void setCoach( @Qualifier("cricketCoach")Coach coach)
     {
         this.coach=coach;
-    }
+    }*/
 
 
 
