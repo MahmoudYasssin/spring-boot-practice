@@ -17,10 +17,12 @@ public class SpringBootPracticeApplication {
 		SpringApplication.run(SpringBootPracticeApplication.class, args);
 	}
 
+
+	//
 	@Bean
 	public CommandLineRunner commandLineRunner(StudentDao studentDao) {
 		return runner -> {
-			createStudent(studentDao);          		 //for Saving
+		//	createStudent(studentDao);          		 //for Saving
 			//retrieveStudent(studentDao) ;  			 //for Retrieving
 			//findAllByName(studentDao);    			 //for Retrieving specific Student
 			//findAllStudents(studentDao);  			 //for Retrieving All Students
